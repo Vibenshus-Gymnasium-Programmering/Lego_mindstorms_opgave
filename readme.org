@@ -1,0 +1,65 @@
+#+title: Leg med lego mindstorms
+#+subtitle: Programmering
+#+author: Vibenshus Gymnasium
+#+options: ^:{}
+
+[[./img/ev3_demo.jpeg]]
+
+* Introduktion
+I dette projekt skal I arbejde med at bygge og udvikle kode til Lego mindstorms-robotter på platformen ev3. Oprindeligt har lego udviklet sit eget blokprogrammeringssprog til platformen, men i dette projekt, arbejder vi med =python=, når vi skal programmere robotterne.
+
+** Lidt historie
+Et fællesskab nørder har en gang (for længe siden) udviklet deres egen linuxdistribution til lego Mindstorms EV3, hvor man kan udvikle kode til at styre legorobotterne ved hjælp af forskellige programmeringssprog, som ikke er officielt understøttet af lego. Man kan finde deres arbejde på [[https://www.ev3dev.org/]]. Ved hjælp af ev3dev er det derfor muligt at udvikle programmer til legorobotter i standard =python=.
+
+Senere har de gode folk hos [[https://pybricks.com]] taget stafetten op og har udviklet en speciel udgave af =micro-python=, som passer til ev3 og mange flere af legos robotter.
+
+Fidusen med =micro-python= er, at det fylder langt mindre og kan køres væsentligt hurtigere end standard-python, hvilket er særligt mærkbart på ev3, da processoren i denne ikke er alt for hurtigt.
+Ulempen ved micro-python er så til gengæld, at man som udgangspunkt ikke har adgang til alle de 3. parts biblioteker, som er udviklet til standard-python, og at de porterede biblioteker ikke nødvendigvis kan eksakt det samme som standard-python.
+
+
+* Vigtig viden ligegyldig info
+** Installation af Debian Stretch ev3dev-edition
+
+Debian Stretch ev3dev-edition er en særlig udgave Linuxdistributionen Debian Stretch (en ældre sag efterhånden), som er specielt udviklet til at køre på ev3.
+
+Jeg har allerede installeret linuxdistributionen på en række microSD-kort. Disse kort skal blot indsættes i sd-kortlæseren på ev3, og ev3 startes op ved at trykke på den midterste knap på fronten af ev3'en.
+
+Det er sd-kortimaget, [[https://education.lego.com/en-us/product-resources/mindstorms-ev3/teacher-resources/python-for-ev3]], som er installeret, og der er anvendt følgende to guides til details
+
+- [[https://pybricks.com/install/mindstorms-ev3/installation/]]
+- [[https://github.com/jonascj/lego-mindstorms-ev3dev-python-how-to]]
+
+** WiFi-dongle
+Jeg har på forhånd købt og indsat følgende WiFi-dongle i alle ev3'erne: *TP-Link TL-WN725N - Netværksadapter - USB 2.0 - 802.11b/g/n*.
+
+Denne er understøttet af linux ud af boksen, og sørger for at ev3'erne kan gå på wifi. Dette betyder også, at vi kan tilgå ev3'erne trådløst gennem ssh f.eks. Mere om dette senere.
+
+** Installation af VS Code samt tilhørende ev3-moduler
+
+Følg vejledningen her: [[https://github.com/jonascj/lego-mindstorms-ev3dev-python-how-to#workflow-vs-code]] for at installere VS Code og de tilhørende ev3-moduler. Ved hjælp af disse programmer er det "nemt" at udvikle kode på sin egen computer, som så kan overflyttes til ev3'erne og køres på dem.
+
+Alternativt kan I anvende følgende guides: [[https://pybricks.com/install/mindstorms-ev3/installation/]] eller [[https://pybricks.com/ev3-micropython/index.html]]
+
+* Aflevering og rapportskrivning
+Som afslutning på dette projekt skal I aflevere
+
+- koden til jeres robotter
+- en rapport/synopsis.
+
+** Fokuspunkter til rapporten/synopsen
+I jeres rapport skal I have fokus på
+
+- demonstration af jeres robot
+- præsentation og forklaring af koden, som får jeres robot til at gøre, som den gør i demonstrationen.
+
+Når man skal demonstrere virkemåden af et programmeringsprojekt, kan det være en god idé at optage korte videosekvenser suppleret med billeder og eller gifs.
+
+Hvis man anvender videosekvenser, kan de uploades til en videotjeneste på internettet (youtube, vimeo eller lignende) og så kan man indsætte links til disse videoer i selve rapporten. Hvis dette gøres, så *skal* der også være billeder i selve rapporten, så man ikke er nødt til at følge linket, for at forstå virkemåden.
+
+En anden mulighed er at konvertere videosekvenserne til gifs (animerede billeder). Disse fylder langt mindre end selve videoerne, og man mister kun lydsporet. I kan altid bare søge efter =video to gif= på google eller lignende søgetjeneste for at finde et konverteringsprogram.
+
+*** Afleveringsformat
+Der er frit valg til afleveringsfilformat. Nogle kan bedst lide at skrive rapporter i et almindeligt tekstbehandlingsprogram (microsoft word f.eks.), men jeg vil stærkt anbefale jer, at skrive rapporten i enten en =markdown= eller =org mode= -fil. Grunden til dette er, at github er i stand til at rendere disse filtyper på en fornuftig måde direkte. Ydermere skal =gifs= blot indsættes som var de almindelige billeder, men de vil stadig være animerede. Der er også god understøttelse af at indsætte kodestumper i henholdsvis =markdown= og =org mode= -filer. I har allerede set syntaksen til dette i tidligere projekter.
+
+Af den grund har jeg oprettet to forskellige filer, =rapport.md= og =rapport.org=, som I kan skrive jeres rapport i. *I skal bare slette den/dem af filerne, som I ikke kommer til at anvende.* Hvis I vælger at skrive jeres rapport i =docx= eller =pdf= så skal I selv sørge for at uploade filen til jeres git repository.
+
